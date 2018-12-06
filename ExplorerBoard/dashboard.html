@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 
-    <title>Paper Dashboard by Creative Tim</title>
+    <title>ExplorerBoard</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -52,7 +52,7 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-warning text-center">
-                                            <img src="assets/img/logo.png" alt="logo" height="125" width="125">
+                                            <img src="assets/img/logo.png" alt="logo" height="125" width="125" data-toggle="tooltip" data-placement="top" >
 
                                         </div>
                                     </div>
@@ -72,8 +72,8 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-success text-center">
-                                            <i class="fas fa-sun"></i>
+                                        <div class="icon-big icon-success text-center" >
+                                            <i class="fas fa-sun" ></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -86,7 +86,7 @@
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-calendar"></i> Last day
+                                        <i class="ti-calendar"></i> Aujourd'hui
                                     </div>
                                 </div>
                             </div>
@@ -98,20 +98,19 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-danger text-center">
-                                            <i class="ti-pulse"></i>
+                                            <i class="fas fa-list-ul"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Errors</p>
-                                            23
+                                            To do
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-timer"></i> In the last hour
+                                        <i class="ti-timer"></i> A effectuer aujourd'hui
                                     </div>
                                 </div>
                             </div>
@@ -123,21 +122,23 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-info text-center">
-                                            <i class="ti-twitter-alt"></i>
+                                            <i class="ti-settings"></i>
                                         </div>
+
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Réglages">
+                                            Réglages
+                                        </button>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Followers</p>
-                                            +45
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -149,13 +150,18 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Etat de santé</h4>
+                                <div class="col-xs-7">
+                                    <div class="numbers">
+                                        Rythme cardiaque élevé
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="content">
-                                <!-- Image Map Generated by http://www.image-map.net/ -->
                                     <img src="assets/img/body.png" alt="Responsive image" usemap="#image-map" width="200" height="500">
 
                                     <map name="image-map" data-toggle="tooltip" data-placement="top">
-                                        <area target="" alt="Pied2" title="Pied2" href="" coords="954,3546,248" shape="circle">
+                                        <area onclick="alert.log('eee');" alt="Pied2" title="Pied2" href="" coords="954,3546,248" shape="circle">
                                         <area target="" alt="Pied1" title="Pied1" href="" coords="367,3555,232" shape="circle">
                                         <area target="" alt="Knee1" title="Knee1" href="" coords="445,2759,179" shape="circle">
                                         <area target="" alt="Knee2" title="Knee2" href="" coords="864,2743,179" shape="circle">
@@ -163,7 +169,8 @@
                                         <area target="" alt="Tete" title="Tete" href="" coords="662,270,311" shape="circle">
                                         <area target="" alt="Ventre" title="Ventre" href="" coords="651,1593,292" shape="circle">
                                     </map>
-                                    <script>
+
+                                <script>
                                         !function(){"use strict";function a(){function a(){function a(a,c){function d(a){var c=1===(e=1-e)?"width":"height";return Math.floor(Number(a)*b[c])}var e=0;i[c].coords=a.split(",").map(d).join(",")}var b={width:k.width/k.naturalWidth,height:k.height/k.naturalHeight};j.forEach(a)}function b(a){return a.coords.replace(/ *, */g,",").replace(/ +/g,",")}function c(){clearTimeout(l),l=setTimeout(a,250)}function d(){(k.width!==k.naturalWidth||k.height!==k.naturalHeight)&&a()}function e(){k.addEventListener("load",a,!1),window.addEventListener("focus",a,!1),window.addEventListener("resize",c,!1),window.addEventListener("readystatechange",a,!1),document.addEventListener("fullscreenchange",a,!1)}function f(){return"function"==typeof h._resize}function g(){i=h.getElementsByTagName("area"),j=Array.prototype.map.call(i,b),k=document.querySelector('img[usemap="#'+h.name+'"]'),h._resize=a}var h=this,i=null,j=null,k=null,l=null;f()?h._resize():(g(),e(),d())}function b(){function b(a){if(!a.tagName)throw new TypeError("Object is not a valid DOM element");if("MAP"!==a.tagName.toUpperCase())throw new TypeError("Expected <MAP> tag, found <"+a.tagName+">.")}function c(c){c&&(b(c),a.call(c),d.push(c))}var d;return function(a){switch(d=[],typeof a){case"undefined":case"string":Array.prototype.forEach.call(document.querySelectorAll(a||"map"),c);break;case"object":c(a);break;default:throw new TypeError("Unexpected data type ("+typeof a+").")}return d}}"function"==typeof define&&define.amd?define([],b):"object"==typeof module&&"object"==typeof module.exports?module.exports=b():window.imageMapResize=b(),"jQuery"in window&&(jQuery.fn.imageMapResize=function(){return this.filter("map").each(a).end()})}();
                                         imageMapResize();
 
@@ -171,28 +178,41 @@
                                     </script>
 
                             </div>
+
                         </div>
+
+
                         <div class="card">
-                            <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
+                            <div class="header bg-danger">
+                                <h4 class="title">Urgence</h4>
                             </div>
-                            <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+                            <div class="content bg-danger">
 
                                 <div class="footer">
                                     <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
+                                        <i class="fa fa-circle text-info"></i> Fonctionnel
                                     </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="ti-timer"></i> Campaign sent 2 days ago
+                                        <i class="ti-timer"></i> Envoi des secours dans N secondes
                                     </div>
                                 </div>
                             </div>
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Ressources</h4>
+                                    <i class="fas fa-tint"></i>
+                                    <i class="fas fa-tint"></i>
+                                    <i class="fas fa-tint"></i>
+
+
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top">
+                                    En voir plus
+                                </button>
+                            </div>
                         </div>
+
                     </div>
                     <div class="col-md-6">
 
@@ -213,6 +233,45 @@
                             <div class="content">
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="icon-big icon-warning text-center">
+                                            <i class="fas fa-solar-panel"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="numbers">
+                                            <div class="chart-legend">
+                                                <i class="fa fa-circle text-info"></i> Fonctionnel
+                                            </div>
+                                            Panneaux solaire
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="icon-big icon-warning text-center">
+                                            <i class="fas fa-solar-panel"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="numbers">
+                                            <div class="chart-legend">
+                                                <i class="fa fa-circle text-info"></i> Fonctionnel
+                                            </div>
+                                            Panneaux solaire
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
