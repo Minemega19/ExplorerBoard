@@ -94,7 +94,7 @@ function seul(){
     reponse(h1,"Ca va?",10);
     videT(11);
     reponse(h1,"Tu ne te sens pas trop seul?",11.001);
-    videT(13);
+    videT(14);
   }
 }
 
@@ -125,17 +125,17 @@ function chercheMot(){
 
 function jeu(){
   reponse(h1,"Je suis désolé, je n'aime pas les jeux",0);
-  videT(2);
+  videT(3);
 }
 function danger(){
   reponse(h1,"Les robots n'ont détecté aucun danger",0);
-  videT(2);
+  videT(3);
 }
 function sante(){
   reponse(h1,"Vous êtes un peu déshydraté",0);
-  videT(2);
-  reponse(h1,"Vous devriez boire plus régulièrement",2.001);
-  videT(4);
+  videT(3);
+  reponse(h1,"Vous devriez boire plus régulièrement",3.001);
+  videT(6);
 }
 function blague(){
   var rand=Math.floor(Math.random() * 3);
