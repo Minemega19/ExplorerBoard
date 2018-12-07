@@ -22,4 +22,21 @@ input{
   border : 1px solid;
   text-align: center;
 }
+#lebouton{
+    margin-top: 2%;
 
+}
+
+#bouton{
+  background: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 5px 5px;
+
+text-decoration:none;
+  padding: 2px 5.8%;
+}
+
+#bouton:hover{
+    background: #00a8ff;
+}
