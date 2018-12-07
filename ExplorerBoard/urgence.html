@@ -40,10 +40,12 @@
     <p class="lead">
         <a class="btn btn-danger btn-lg " href="#" role="button" onclick="annulation()">Annuler</a>
     </p>
+		<div id="memePixar"></div>
+		<input type="button" onclick="meme();" id="memePixar" value="Clique 15 fois ici !!">
 </div>
 <script>
 
-
+		var counter = 15;
     var cpt = 10 ;
     var x ;
     decompte();
@@ -62,10 +64,15 @@
         else {
             clearTimeout(x);
             window.location.href = "dashboard.html";
-
         }
     }
 
+		function meme() {
+			counter--;
+			if(counter == 0) {
+				document.getElementById('memePixar').innerHTML = '<img src="assets/img/meme/pixar.jpg">';
+			}
+		}
 </script>
 </body>
 
