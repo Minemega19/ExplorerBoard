@@ -1,3 +1,14 @@
+<?php
+
+	$pdo=new Mypdo();
+	$scientifiqueManager = new scientifiqueManager($pdo);
+	$scientifique = $personneManager->getPersonneById("LEVIN");
+	var_dump($scientifique);
+
+
+?>
+
+
 <!DOCTYPE html>
 
 <html>
