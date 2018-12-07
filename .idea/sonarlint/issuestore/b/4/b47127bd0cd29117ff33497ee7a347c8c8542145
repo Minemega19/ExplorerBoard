@@ -1,0 +1,13 @@
+
+]	php:S1854G"HRemove this useless assignment to local variable '$tempTourApresMinuit'.(î½—…
+b	php:S1854F"HRemove this useless assignment to local variable '$tempTourAvantMinuit'.(İş¶Üıÿÿÿÿ
+c	php:S1192F"IDefine a constant instead of duplicating this literal "00:00:00" 3 times.(İş¶Üıÿÿÿÿ
+^	php:S1192Q"IDefine a constant instead of duplicating this literal "%H:%I:%S" 3 times.(Ş‡¸®
+w	php:S1488"]Immediately return this expression instead of assigning it to the temporary variable "$date".(íÈõüÿÿÿÿ
+r	php:S1488
+"]Immediately return this expression instead of assigning it to the temporary variable "$date".(é××Š
+x	php:S1488"^Immediately return this expression instead of assigning it to the temporary variable "$heure".(šÉ›¿øÿÿÿÿ
+{	php:S1488"fImmediately return this expression instead of assigning it to the temporary variable "$totalSecondes".(´Ú×¹
+{	php:S14880"fImmediately return this expression instead of assigning it to the temporary variable "$totalSecondes".(Á±¤½
+v	php:S1488:"aImmediately return this expression instead of assigning it to the temporary variable "$resultat".(·–ÿ’
+{	php:S1488@"aImmediately return this expression instead of assigning it to the temporary variable "$secondes".(‚ùåıüÿÿÿÿ
