@@ -33,7 +33,7 @@ function checkMessage(){
   } else if(msg=="temp"||msg=="temperature"||msg=="température"||msg=="quelle est la temperature"||msg=="quelle est la température"||msg=="quelle est la temperature?"||msg=="quelle est la température?"){
     temperature();
   }else{
-    msgdefaut();
+    chercheMot();
   }
   input.value="";
 }
