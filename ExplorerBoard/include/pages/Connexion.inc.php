@@ -1,11 +1,14 @@
 <?php
+$db = mysqli_connect("localhost","bd","bede");
+mysqli_select_db($db,"scientifique");
 
-	/*$pdo=new Mypdo();
-	$scientifiqueManager = new scientifiqueManager($pdo);
-	$scientifique = $personneManager->getPersonneById("LEVIN");
-	var_dump($scientifique);*/
+$req = "Select * From scientifique WHERE idScientifique='1' ";
+$result = mysqli_query($db,$req);
 
+var_dump($result);
 
+print_r($result);
+echo $result;
 ?>
 
 
@@ -30,7 +33,7 @@
 		
 		<input type="text" name="nom" id="champsNom" placeholder="Nom" required/>
 			
-		<input type="password" name="pwd" id="champsPwd" placeholder="prenom" required/>
+		<input type="password" name="pwd" id="champsPwd" placeholder="password" required/>
 	
 	</div>	
 	
