@@ -86,7 +86,7 @@ function temperature(){
 }
 
 function seul(){
-  var rand=Math.floor(Math.random() * 2);
+  var rand=Math.floor(Math.random() * 4);
   if(rand==0){
     reponse(h1,"Zzz",10);
     videT(12);
@@ -95,6 +95,10 @@ function seul(){
     videT(11);
     reponse(h1,"Tu ne te sens pas trop seul?",11.001);
     videT(14);
+  }else if(rand==2){
+    sante();
+  }else if(rand==3){
+    danger();
   }
 }
 
