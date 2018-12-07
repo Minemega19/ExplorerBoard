@@ -1,14 +1,15 @@
 <?php
 $db = mysqli_connect("localhost","bd","bede");
-mysqli_select_db($db,"scientifique");
+mysqli_select_db($db,"explorerboard");
 
-$req = "Select * From scientifique WHERE idScientifique='1' ";
+$req = "SELECT login, password from scientifique ";
 $result = mysqli_query($db,$req);
+$ligne=mysqli_fetch_array($result);
 
-var_dump($result);
 
-print_r($result);
-echo $result;
+
+
+
 ?>
 
 
@@ -34,6 +35,8 @@ echo $result;
 		<input type="text" name="nom" id="champsNom" placeholder="Nom" required/>
 			
 		<input type="password" name="pwd" id="champsPwd" placeholder="password" required/>
+
+		<div id="lebouton"><a id="bouton" href="../../dashboard.html">Envoyer</a></div>
 	
 	</div>	
 	
