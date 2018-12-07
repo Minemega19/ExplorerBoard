@@ -1,0 +1,25 @@
+
+
+body{
+  
+  background-color : #2f3640;
+}
+
+#blocMid{
+   margin: 12% 0px 0px 45%;
+}
+
+#logo{
+  width: 150px;
+  
+}
+
+input{
+  display: block;
+  margin-top: 2%; 
+  padding: 0.7%;
+  border-radius: 5px;
+  border : 1px solid;
+  text-align: center;
+}
+

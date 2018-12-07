@@ -1,0 +1,39 @@
+<?php
+class scientifiqueManager{
+
+	private $dbo;
+	
+
+	public function __construct($db){
+		$this->db=$db;
+	}
+	
+
+	public function add($scientifique){
+		
+
+		$requete = $this->db->prepare('INSERT INTO scientifique (nom,prenom,groupeSanguin,login,password) VALUES (:nom,:prenom,:groupeSanguin,:mail,:login,:pwd);');
+
+		$requete->bindValue(':nom',$scientifique->getNom());
+		$requete->bindValue(':prenom',$scientifique->getPrenom());
+		$requete->bindValue(':groupeSanguin',$scientifique->getGroupeSanguin());
+		$requete->bindValue(':login',$scientifique->getLogin());
+		$requete->bindValue(':pwd',$scientifique->getPassword());
+
+		$retour = $requete->execute();
+
+		return $retour;
+	}
+
+
+		public function getPersonneById($id){
+			//echo "mon id".$id;
+		$requete = $this->db->prepare('Select nom,prenom,groupeSanguin,login,password FROM scientifique WHERE nom = :nom ;');
+		$requete->bindValue(':id',$id);
+		$requete->execute();
+		$personne = $requete->fetch(PDO::FETCH_OBJ);
+			$LaPersonne  = new Personne($personne);
+            return $LaPersonne;
+
+		}
+}
