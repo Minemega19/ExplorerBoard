@@ -37,8 +37,7 @@ input {
     display: inline-block;
     font-size: 30px;
 }
-
-/*bot*/
-#h1bot,#h2bot,#h3bot,#h4bot,#h5bot,#h6bot{
-  text-align: center;
+area {
+    display: block;
+    background-color: #ffa407;
 }

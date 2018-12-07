@@ -63,7 +63,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr/>
+                                <div class="footer">
+                                    <hr />
+                                    <div class="stats">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,13 +77,16 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-success text-center" >
-                                            <i class="fas fa-sun" ></i>
+                                            <i class="fas fa-sun fa-3x" ></i>
+
+
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Météo</p>
                                             44 °C
+
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +105,7 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-danger text-center">
-                                            <i class="fas fa-list-ul"></i>
+                                            <i class="fas fa-list-ul  fa-3x"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -122,23 +129,19 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-info text-center">
-                                            <i class="ti-settings"></i>
+                                            <i class="fas fa-cog  fa-3x"></i>
                                         </div>
-
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Réglages">
-                                            Réglages
-                                        </button>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-
+                                            Réglages
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
+                                    <div class="stats">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -150,32 +153,85 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Etat de santé</h4>
+                                Cliquez sur une partie du corps
                                 <div class="col-xs-7">
-                                    <div class="numbers">
+                                    <div id="nameTest" class="numbers">
                                         Rythme cardiaque élevé
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="content">
+                            <div class="content" id="target">
                                     <img src="assets/img/body.png" alt="Responsive image" usemap="#image-map" width="200" height="500">
 
                                     <map name="image-map" data-toggle="tooltip" data-placement="top">
-                                        <area onclick="alert.log('eee');" alt="Pied2" title="Pied2" href="" coords="954,3546,248" shape="circle">
-                                        <area target="" alt="Pied1" title="Pied1" href="" coords="367,3555,232" shape="circle">
-                                        <area target="" alt="Knee1" title="Knee1" href="" coords="445,2759,179" shape="circle">
-                                        <area target="" alt="Knee2" title="Knee2" href="" coords="864,2743,179" shape="circle">
-                                        <area target="" alt="Coeur" title="Coeur" href="" coords="816,905,285" shape="circle">
-                                        <area target="" alt="Tete" title="Tete" href="" coords="662,270,311" shape="circle">
-                                        <area target="" alt="Ventre" title="Ventre" href="" coords="651,1593,292" shape="circle">
+                                        <area href="#" onclick="Anomalie('pD')" alt="PiedDroit" title="PiedDroit" coords="954,3546,248" shape="circle">
+                                        <area href="#" onclick="Anomalie('pG')" target="" alt="PiedGauche" title="PiedGauche"  coords="367,3555,232" shape="circle">
+                                        <area href="#" onclick="Anomalie('kD')" target="" alt="Knee1" title="Knee1" coords="445,2759,179" shape="circle">
+                                        <area href="#" onclick="Anomalie('kG')" target="" alt="Knee2" title="Knee2" coords="864,2743,179" shape="circle">
+                                        <area href="#" onclick="Anomalie('heart')" target="" alt="Coeur" title="Coeur" coords="816,905,285" shape="circle">
+                                        <area href="#" onclick="Anomalie('tete')" target="" alt="Tete" title="Tete" coords="662,270,311" shape="circle">
+                                        <area href="#" onclick="Anomalie('abdomen')" target="" alt="Abdomen" title="Abdomen" coords="651,1593,292" shape="circle">
                                     </map>
-
                                 <script>
+
+                                        function Anomalie(f){
+
+                                            if(f=='abdomen'){
+                                                var change = document.getElementById("nameTest").innerText = "Rien à signaler au niveau de l'abdomen";
+                                                var change2 = document.getElementById("nameTest").style.color = "black";
+                                            }
+                                            if(f=='pG'){
+                                                var change = document.getElementById("nameTest").innerText = "Rien à signaler au niveau du pied gauche";
+                                                var change2 = document.getElementById("nameTest").style.color = "black";
+
+                                            }
+                                            if(f=='pD'){
+                                                var change = document.getElementById("nameTest").innerText = "Rien à signaler au niveau du pied droit";
+                                                var change2 = document.getElementById("nameTest").style.color = "black";
+
+                                              }
+                                            if(f=='kD'){
+                                                var change = document.getElementById("nameTest").innerText = "Rien à signaler au niveau du genou droit";
+                                                var change2 = document.getElementById("nameTest").style.color = "black";
+
+                                           }
+                                            if(f=='kG'){
+                                                var change = document.getElementById("nameTest").innerText = "Rien a signaler au niveau du genou droit";
+                                                var change2 = document.getElementById("nameTest").style.color = "black";
+
+                                            }
+                                            if(f=='heart'){
+                                                var change = document.getElementById("nameTest").innerText = "Rythme cardiaque élevé en lien avec une forte chaleur ambiante";
+                                                 var change2 = document.getElementById("nameTest").style.color = "red";
+                                                $(document).ready(function(){
+
+                                                    demo.initChartist();
+
+                                                    $.notify({
+                                                        icon: 'ti-heart',
+                                                        message: "Le <b>rythme cardiaque </b> est trop élevé en association avec de forte température"
+
+                                                    },{
+                                                        type: 'danger',
+                                                        timer: 150000
+                                                    });
+
+                                                });
+
+                                            }
+                                            if(f=='tete'){
+                                                var change = document.getElementById("nameTest").innerText = "Rien à signaler au niveau de la tête";
+                                                var change2 = document.getElementById("nameTest").style.color = "black";
+
+                                             }
+                                        }
+
                                         !function(){"use strict";function a(){function a(){function a(a,c){function d(a){var c=1===(e=1-e)?"width":"height";return Math.floor(Number(a)*b[c])}var e=0;i[c].coords=a.split(",").map(d).join(",")}var b={width:k.width/k.naturalWidth,height:k.height/k.naturalHeight};j.forEach(a)}function b(a){return a.coords.replace(/ *, */g,",").replace(/ +/g,",")}function c(){clearTimeout(l),l=setTimeout(a,250)}function d(){(k.width!==k.naturalWidth||k.height!==k.naturalHeight)&&a()}function e(){k.addEventListener("load",a,!1),window.addEventListener("focus",a,!1),window.addEventListener("resize",c,!1),window.addEventListener("readystatechange",a,!1),document.addEventListener("fullscreenchange",a,!1)}function f(){return"function"==typeof h._resize}function g(){i=h.getElementsByTagName("area"),j=Array.prototype.map.call(i,b),k=document.querySelector('img[usemap="#'+h.name+'"]'),h._resize=a}var h=this,i=null,j=null,k=null,l=null;f()?h._resize():(g(),e(),d())}function b(){function b(a){if(!a.tagName)throw new TypeError("Object is not a valid DOM element");if("MAP"!==a.tagName.toUpperCase())throw new TypeError("Expected <MAP> tag, found <"+a.tagName+">.")}function c(c){c&&(b(c),a.call(c),d.push(c))}var d;return function(a){switch(d=[],typeof a){case"undefined":case"string":Array.prototype.forEach.call(document.querySelectorAll(a||"map"),c);break;case"object":c(a);break;default:throw new TypeError("Unexpected data type ("+typeof a+").")}return d}}"function"==typeof define&&define.amd?define([],b):"object"==typeof module&&"object"==typeof module.exports?module.exports=b():window.imageMapResize=b(),"jQuery"in window&&(jQuery.fn.imageMapResize=function(){return this.filter("map").each(a).end()})}();
                                         imageMapResize();
 
                                         $('map').imageMapResize();
-                                    </script>
+                                </script>
 
                             </div>
 
@@ -191,6 +247,7 @@
                                 <div class="footer">
                                     <div class="chart-legend">
                                         <i class="fa fa-circle text-info"></i> Fonctionnel
+
                                     </div>
                                     <hr>
                                     <div class="stats">
@@ -201,10 +258,8 @@
                             <div class="card">
                                 <div class="header">
                                     <h4 class="title">Ressources</h4>
-                                    <i class="fas fa-tint"></i>
-                                    <i class="fas fa-tint"></i>
-                                    <i class="fas fa-tint"></i>
-
+                                    <i class="fas fa-tint fa-3x"></i>
+                                    <i class="fas fa-cookie-bite fa-3x"></i>
 
                                 </div>
                                 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top">
@@ -222,13 +277,13 @@
                             </div>
                             <div class="header">
                                 <div id="output">
-																	<h1 id="h1Bot"></h1>
-																	<h2 id="h2Bot"></h2>
-																	<h3 id="h3Bot"></h3>
-																	<h4 id="h4Bot"></h4>
-																	<h5 id="h5Bot"></h5>
-																	<h6 id="h6Bot"></h6>
-																</div>
+                                    <h1 id="h1Bot"></h1>
+                                    <h2 id="h2Bot"></h2>
+                                    <h3 id="h3Bot"></h3>
+                                    <h4 id="h4Bot"></h4>
+                                    <h5 id="h5Bot"></h5>
+                                    <h6 id="h6Bot"></h6>
+                                </div>
 
                                 <div id="container">
                                     <input type="text" id="input" value="">
@@ -252,10 +307,15 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <div class="chart-legend">
-                                                <i class="fa fa-circle text-info"></i> Fonctionnel
-                                            </div>
                                             Panneaux solaire
+
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-circle text-info"></i> <p>En fonctionnement</p>
+
+                                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Réglages">
+                                                Consulter
+                                            </button>
                                         </div>
                                     </div>
 
@@ -265,22 +325,51 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-warning text-center">
-                                            <i class="fas fa-solar-panel"></i>
+                                            <i class="fas fa-wind"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <div class="chart-legend">
-                                                <i class="fa fa-circle text-info"></i> Fonctionnel
-                                            </div>
-                                            Panneaux solaire
+                                            Eolienne
+
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-circle text-info"></i> <p>En fonctionnement</p>
+
+                                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Réglages">
+                                                Consulter
+                                            </button>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
                     </div>
+
                 </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="icon-big icon-info text-center">
+                                            <i class="fas fa-compass fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="numbers">
+                                            Coordonnées
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <hr />
+                                    <div class="stats">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 
@@ -321,20 +410,7 @@
 
 
 	<script type="text/javascript">
-    	$(document).ready(function(){
 
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: 'ti-cars',
-            	message: "<b>None</b> - Notification non trouvée"
-
-            },{
-                type: 'success',
-                timer: 4000
-            });
-
-    	});
 	</script>
 
 </html>
