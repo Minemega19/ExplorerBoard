@@ -2,8 +2,24 @@ $("#image-map").click( function(){
     alert.log("clicked");
 });
 
+<<<<<<< HEAD
 var questionNum = 0;													// keep count of question, used for IF condition.
 var question = '<h1>what is your name?</h1>';				  // first question
+=======
+function checkMessage(){
+  var msg=input.value;
+  if(msg=="qui es tu" || msg=="qui es tu?" || msg=="tu es qui?" || msg=="tu es qui" || msg=="t'es qui?" || msg=="t'es qui"){
+    presentation();
+  } else if(msg=="quelle heure est-il?" || msg=="quelle heure est-il" || msg=="quelle heure est il?" || msg=="quelle heure est il" || msg=="heure" || msg=="quelle heure" || msg=="quelle heure?"){
+    heure();
+  } else if(msg=="temp"||msg=="temperature"||msg=="température"||msg=="quelle est la temperature"||msg=="quelle est la température"||msg=="quelle est la temperature?"||msg=="quelle est la température?"){
+    temperature();
+  }else{
+    chercheMot();
+  }
+  input.value="";
+}
+>>>>>>> origin/master
 
 var output = document.getElementById('output');				// store id="output" in output variable
 output.innerHTML = question;													// ouput first question
